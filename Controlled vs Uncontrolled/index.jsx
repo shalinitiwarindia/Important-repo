@@ -1,35 +1,19 @@
-//Controlled Component
-import { useState } from "react";
+import React from "react";
+import ControlledComponent from "./ControlledComponent";
+import UncontrolledComponent from "./UncontrolledComponent";
 
-function ControlledInput() {
-  const [name, setName] = useState("");
-
+function App() {
   return (
-    <div>
-      <input
-        type="text"
-        value={name} // Controlled by React
-        onChange={(e) => setName(e.target.value)}
-      />
-      <p>Your name is: {name}</p>
+    <div style={{ padding: "20px" }}>
+      <h2>✅ Controlled Component</h2>
+      <ControlledComponent />
+
+      <hr style={{ margin: "30px 0" }} />
+
+      <h2>❌ Uncontrolled Component</h2>
+      <UncontrolledComponent />
     </div>
   );
 }
 
-//Uncontrolled Compopnent
-import { useRef } from "react";
-
-function UncontrolledInput() {
-  const inputRef = useRef();
-
-  const handleSubmit = () => {
-    alert("Input value is: " + inputRef.current.value);
-  };
-
-  return (
-    <div>
-      <input type="text" ref={inputRef} /> {/* DOM handles this */}
-      <button onClick={handleSubmit}>Submit</button>
-    </div>
-  );
-}
+export default App;
