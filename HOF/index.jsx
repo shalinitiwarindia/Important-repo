@@ -13,12 +13,4 @@ const withAuth = (WrappedComponent) => {
   };
 };
 
-// Example Component
-const Dashboard = () => {
-  return <h2>Welcome to the Dashboard!</h2>;
-};
 
-// Wrapping Dashboard with HOC
-const ProtectedDashboard = withAuth(Dashboard);
-
-export default ProtectedDashboard;
