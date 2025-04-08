@@ -19,3 +19,9 @@ arr.filter((item) => {
   }
 });
 console.log("removed array value", b); // 👉 [1, 2, 3, 4]
+
+//Better way (using Set):
+const arr = [1, 2, 3, 4, 1, 2];
+const uniqueArr = [...new Set(arr)];
+console.log("removed array value", uniqueArr); // 👉 [1, 2, 3, 4]
+
