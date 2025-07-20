@@ -3,6 +3,6 @@ function mul(a) {
     return function (c) {
       return a * b * c;
     };
-  };
+
 
 
