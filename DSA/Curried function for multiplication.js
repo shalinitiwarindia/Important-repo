@@ -6,5 +6,5 @@ function mul(a) {
   };
 }
 
-console.log("output with normal function", mul(2)(4)(6)); // 👉 48
+co
 
