@@ -4,7 +4,5 @@ function mul(a) {
       return a * b * c;
     };
   };
-}
 
-co
 
