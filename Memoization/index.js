@@ -4,4 +4,3 @@ function memo(fn) {
     if (x in cache) return cache[x];
     return cache[x] = fn(x);
   };
-}
